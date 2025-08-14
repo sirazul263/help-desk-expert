@@ -1,16 +1,7 @@
 import { motion } from "framer-motion";
 const Hero = () => {
   return (
-    <section className="max-w-5xl mx-auto mt-20" id="hero">
-      <motion.p
-        className="text-pink-600"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        Hi, my name is
-      </motion.p>
-
+    <section className="container mx-auto mt-10" id="hero">
       <motion.h2
         className="text-4xl sm:text-6xl font-bold mt-6 mb-3"
         initial={{ opacity: 0, y: 20 }}
@@ -30,7 +21,7 @@ const Hero = () => {
       </motion.h3>
 
       <motion.p
-        className="max-w-3xl mt-6 text-gray-400"
+        className=" mt-6 text-gray-400"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.8 }}
