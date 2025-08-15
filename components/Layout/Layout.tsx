@@ -35,7 +35,7 @@ const Layout = ({ children }: LayoutProps) => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.3 }}
-          className="fixed cursor-pointer bottom-6 right-6 bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full shadow-lg z-50"
+          className="fixed cursor-pointer bottom-6 right-6 bg-primary hover:bg-gray-900 text-white p-3 rounded-full shadow-lg z-50"
           aria-label="Scroll to top"
         >
           <FiChevronUp />

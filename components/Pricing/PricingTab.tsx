@@ -1,7 +1,7 @@
-import { GiCheckMark } from "react-icons/gi";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { cn } from "@/lib/utils";
+import PricingCard from "./PricingCard";
+import PricingTable from "./PricingTable";
+
 const PricingTab = () => {
   const cards = [
     {
@@ -65,9 +65,10 @@ const PricingTab = () => {
       ],
     },
   ];
+
   return (
     <div className="container">
-      <div className="md:my-20">
+      <div className="md:my-20 my-4">
         <h1 className="md:text-5xl text-primary font-extrabold text-center mb-3">
           Simple, Transparent <span className="text-gray-700">Pricing.</span>
         </h1>
@@ -92,39 +93,23 @@ const PricingTab = () => {
           </div>
 
           <TabsContent value="customer">
-            <div className="container py-5 md:py-20">
-              <div className="flex gap-2">
-                {cards.map((card, i) => (
-                  <Card
-                    key={i}
-                    className={cn(
-                      "w-full h-full rounded-4xl border-2 border-blue-100 bg-white hover:border-blue-300",
-                      i == 2 && "mt-[-40px]"
-                    )}
-                  >
-                    <CardHeader className="flex px-4 pt-7">
-                      <CardTitle className="text-2xl font-bold">
-                        <div>{i == 2 && <button>Hi</button>}</div>
-                        {card.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="px-4">
-                      <p className="font-bold text-3xl mb-7">{card.rate}</p>
-                      <ul className="text-gray-900 font-semibold">
-                        {card.details.map((item, _i) => (
-                          <li key={_i} className="mb-2 flex">
-                            <GiCheckMark className="text-green-700 me-2 mt-1 text-sm" />
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
+            <PricingCard cards={cards} />
           </TabsContent>
-          <TabsContent value="password">Change your password here.</TabsContent>
+          <TabsContent value="executive">
+            <PricingCard cards={cards} />
+          </TabsContent>
+          <TabsContent value="marketing">
+            <PricingCard cards={cards} />
+          </TabsContent>
+          <TabsContent value="influencer">
+            <PricingCard cards={cards} />
+          </TabsContent>
+          <TabsContent value="e-commerce">
+            <PricingCard cards={cards} />
+          </TabsContent>
+          <TabsContent value="ai">
+            <PricingTable />
+          </TabsContent>
         </Tabs>
       </div>
     </div>

@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  images: {
+    remotePatterns: [new URL("https://cdn.prod.website-files.com/**")],
+  },
 };
 
 export default nextConfig;
