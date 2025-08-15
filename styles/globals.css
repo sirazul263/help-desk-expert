@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: rgb(255, 255, 255);
+  --background: #effdf4;
   --foreground: oklch(0.129 0.042 264.695);
   --primary: #f15412;
   --font-sans: "Proxima Nova", Arial, sans-serif;
