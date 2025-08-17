@@ -48,7 +48,7 @@ const Header = () => {
     { url: "industries", label: "Industries" },
     { url: "work", label: "How It Work" },
     { url: "/pricing", label: "Pricing" },
-    { url: "contact", label: "Resources" },
+    // { url: "contact", label: "Resources" },
     { url: "contact", label: "Company" },
   ];
 
@@ -98,6 +98,7 @@ const Header = () => {
           className="relative hidden md:flex items-center overflow-hidden px-8 py-3 rounded-full border-0 cursor-pointer bg-primary"
           initial="initial"
           whileHover="hover"
+          onClick={() => router.push("/get-started")}
         >
           {/* Text on top */}
           <span className="relative z-20 flex items-center text-white">

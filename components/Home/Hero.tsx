@@ -4,7 +4,10 @@ import Image from "next/image";
 import { BsArrowRight } from "react-icons/bs";
 import Rating from "../Common/Rating";
 import { Autoplay, EffectFade } from "swiper/modules";
+import { useRouter } from "next/router";
 const Hero = () => {
+  const router = useRouter();
+
   const data = [
     {
       name: "Lauren D.",
@@ -60,6 +63,7 @@ const Hero = () => {
             className="relative mt-10 flex items-center overflow-hidden px-8 py-4 rounded-full border-0 cursor-pointer bg-gray-700"
             initial="initial"
             whileHover="hover"
+            onClick={() => router.push("/get-started")}
           >
             {/* Text on top */}
             <span className="relative z-20 font-bold flex items-center text-white">

@@ -66,6 +66,15 @@ const PricingTab = () => {
     },
   ];
 
+  const tabs = [
+    { name: "Customer Service", value: "customer" },
+    { name: "Executive Assistant", value: "executive" },
+    { name: "Marketing Assistant", value: "marketing" },
+    { name: "Influencer Marketing Specialist", value: "influencer" },
+    { name: "E-Commerce Sales", value: "e-commerce" },
+    { name: "AI Transformation", value: "ai" },
+  ];
+
   return (
     <div className="container">
       <div className="md:my-20 my-4">
@@ -79,19 +88,26 @@ const PricingTab = () => {
 
       <div className="my-5 md:my-20">
         <Tabs defaultValue="customer">
-          <div className="mx-auto md:border bg-white rounded-full md:p-2">
+          <div className="hidden xl:block mx-auto md:border bg-white rounded-full md:p-2">
             <TabsList className="flex flex-wrap gap-x-6 min-w-max ">
-              <TabsTrigger value="customer">Customer Service</TabsTrigger>
-              <TabsTrigger value="executive">Executive Assistant</TabsTrigger>
-              <TabsTrigger value="marketing">Marketing Assistant</TabsTrigger>
-              <TabsTrigger value="influencer">
-                Influencer Marketing Specialist
-              </TabsTrigger>
-              <TabsTrigger value="e-commerce">E-Commerce Sales</TabsTrigger>
-              <TabsTrigger value="ai">AI Transformation</TabsTrigger>
+              {tabs.map((tab, i) => (
+                <TabsTrigger value={tab.value}>{tab.name}</TabsTrigger>
+              ))}
             </TabsList>
           </div>
-
+          <div className="xl:hidden mx-auto mb-30">
+            <TabsList className="flex flex-wrap gap-x-6 ">
+              {tabs.map((tab, i) => (
+                <TabsTrigger
+                  className="border-2 border-gray-300 bg-white mb-3"
+                  value={tab.value}
+                  key={i}
+                >
+                  {tab.name}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </div>
           <TabsContent value="customer">
             <PricingCard cards={cards} />
           </TabsContent>

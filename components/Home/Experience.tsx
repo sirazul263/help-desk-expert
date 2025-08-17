@@ -35,7 +35,10 @@ const CountUp = ({ end }: { end: number }) => {
 
 const Experience = () => {
   return (
-    <section id="experience" className="w-full md:w-6xl mx-auto mt-40 px-4">
+    <section
+      id="experience"
+      className="w-full md:w-6xl mx-auto mt-5 md:mt-40 px-4"
+    >
       {/* Heading */}
       <motion.div
         className="w-full"

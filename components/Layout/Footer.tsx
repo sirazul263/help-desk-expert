@@ -72,18 +72,22 @@ const Footer = () => {
 
                 <h5 className="text-sm font-semibold mb-3">Contact</h5>
                 <p className="mb-1">
-                  <span className="font-semibold">Phone: </span>+1 0000-000-000
+                  <span className="font-semibold">Phone: </span>+880 1640 332
+                  419
                 </p>
                 <p className="mb-3">
                   <span className="font-semibold">Email: </span>
-                  contact@surfsidemedia.in
+                  contact@helpdeskxpert.com
                 </p>
 
                 <h5 className="text-gray-400 font-semibold text-sm mb-3">
                   Follow Us
                 </h5>
                 <div className="flex space-x-4">
-                  <Link href="#" aria-label="Facebook">
+                  <Link
+                    href="https://web.facebook.com/HelpDeskXpert"
+                    aria-label="Facebook"
+                  >
                     <FaFacebookF
                       className="mt-1 hover:text-primary hover:scale-110 transition-transform duration-300"
                       size={18}
@@ -101,7 +105,10 @@ const Footer = () => {
                       size={20}
                     />
                   </Link>
-                  <Link href="#" aria-label="Instagram">
+                  <Link
+                    href="https://www.instagram.com/helpdeskxpert"
+                    aria-label="Instagram"
+                  >
                     <FaInstagram
                       className="mt-1 hover:text-primary hover:scale-110 transition-transform duration-300"
                       size={18}
