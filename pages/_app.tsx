@@ -6,6 +6,8 @@ import "swiper/css/effect-fade";
 import type { AppProps } from "next/app";
 import { Nunito } from "next/font/google";
 import Head from "next/head";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { queryClient } from "@/lib/queryClient";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -21,9 +23,11 @@ export default function App({ Component, pageProps }: AppProps) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
       </Head>
-      <main className={nunito.className}>
-        <Component {...pageProps} />
-      </main>
+      <QueryClientProvider client={queryClient}>
+        <main className={nunito.className}>
+          <Component {...pageProps} />
+        </main>
+      </QueryClientProvider>
     </>
   );
 }

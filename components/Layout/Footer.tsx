@@ -99,7 +99,10 @@ const Footer = () => {
                       size={18}
                     />
                   </Link>
-                  <Link href="#" aria-label="Linkedin">
+                  <Link
+                    href="https://www.linkedin.com/company/help-desk-xpert"
+                    aria-label="Linkedin"
+                  >
                     <FaLinkedinIn
                       className="mt-1 hover:text-primary hover:scale-110 transition-transform duration-300"
                       size={20}
